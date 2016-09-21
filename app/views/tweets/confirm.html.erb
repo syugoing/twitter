@@ -7,7 +7,7 @@
       <%= f.hidden_field :content %>
     
       <!-- @blog.titleと@blog.contentとすることで、表示用の値を画面に出力しています。 -->
-      <p>内容:<%= @tweet.content %></p>
+      <p>内容:<%= simple_format( @tweet.content ) %></p>
       <%= f.submit 'つぶやく', class: 'btn btn-primary btn-block'  %>
     <% end %>
     

@@ -3,12 +3,33 @@
   <head>
     <title>Twitter</title>
     <%= csrf_meta_tags %>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    
+    <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <%= link_to "reetiwT", root_path, class: "navbar-brand" %>
+          <%= image_tag("Twitter_logo_white_300x300.png", :width => '40') %>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+    </header>
+    
     <%= yield %>
+    
+    <footer>
+    <p>運営会社ことりこ</p>
+    <p>© 2015-2016 Copyright Blue Burd Corp.</p>
+    </footer>
+    
   </body>
 </html>
