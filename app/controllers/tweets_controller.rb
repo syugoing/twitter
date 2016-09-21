@@ -34,6 +34,11 @@ class TweetsController < ApplicationController
   def update
     @tweet = Tweet.find(params[:id])
     @tweet.update(tweets_params)
+    if @tweet.save
+      redirect_to tweets_path, notice: "つぶやきを編集しました！"
+    else
+      render action: 'new'
+    end
   end
   
   def confirm
